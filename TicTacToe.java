@@ -65,7 +65,17 @@ public class TicTacToe {
     }
   }
 
-
+  static void buildBoard(String[][] board) {
+    for (int i = 0; i < board.length; i++) {
+      for (int y = 0; y < board.length; y++) {
+        if (y == 1 || y == 2) {
+          System.out.print("|");
+        }
+        System.out.print(board[i][y]);
+      }
+      System.out.println();
+    }
+  }
 
 
 }
