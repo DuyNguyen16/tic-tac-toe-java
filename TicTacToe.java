@@ -31,11 +31,11 @@ public class TicTacToe {
         // while the input is invalid
         while (true) {
           // ask the player for the row
-          System.out.print("Player 1 enter row number:");
+          System.out.print("Player 1 enter row number: ");
           row_read =  readInput.nextInt();
           
           // ask the player for the column
-          System.out.print("Player 1 enter column number:");
+          System.out.print("Player 1 enter column number: ");
           column_read =  readInput.nextInt();
 
           // end the loop if the inputs are valid
@@ -53,11 +53,11 @@ public class TicTacToe {
         // while the input is invalid
         while (true) {
           // ask the player for the row
-          System.out.print("Player 2 enter row number:");
+          System.out.print("Player 2 enter row number: ");
           row_read =  readInput.nextInt();
           
           // ask the player for the column
-          System.out.print("Player 2 enter column number:");
+          System.out.print("Player 2 enter column number: ");
           column_read =  readInput.nextInt();
           
           // end the loop if the inputs are valid
@@ -97,7 +97,9 @@ public class TicTacToe {
 
   // build the board
   static void buildBoard(String[][] board) {
+    System.out.println("  1 2 3");
     for (int i = 0; i < board.length; i++) {
+      System.out.print((i + 1) +" ");
       for (int y = 0; y < board.length; y++) {
         if (y == 1 || y == 2) {
           System.out.print("|");
