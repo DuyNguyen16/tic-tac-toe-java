@@ -44,14 +44,19 @@ public class TicTacToe {
           }
         }
         
+        // add the value X to the board
         board[row_read - 1][column_read - 1] = "X";
         
+        // change the current player
         isPlayer1 = !isPlayer1;
       } else {
+        // while the input is invalid
         while (true) {
+          // ask the player for the row
           System.out.print("Player 2 enter row number:");
           row_read =  readInput.nextInt();
-        
+          
+          
           System.out.print("Player 2 enter column number:");
           column_read =  readInput.nextInt();
 
@@ -65,6 +70,7 @@ public class TicTacToe {
         isPlayer1 = !isPlayer1;
 
       }
+      
       System.out.print("\033[H\033[2J");
       System.out.flush();
       buildBoard(board);      
