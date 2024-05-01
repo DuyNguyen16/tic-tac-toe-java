@@ -2,27 +2,43 @@ import java.util.Scanner;
 
 public class TicTacToe {
   public static void main(String[] args) {
+    // set up the board
     String[][] board = {{"_", "_", "_"}, {"_","_", "_"}, {"_", "_", "_"}};
 
+    // to read the user input
     Scanner readInput = new Scanner(System.in);
 
+    // check if the current player is player 1
     boolean isPlayer1 = true;
 
+    // clean the terminal
     System.out.print("\033[H\033[2J");
     System.out.flush();
+
+    // display the board
     buildBoard(board);
 
+    // run the game while there is no winner
     while (true) {
+      // player input for row
       int row_read;
+
+      // player input for column
       int column_read;
+
+      // check who is the current player
       if (isPlayer1) {
+        // while the input is invalid
         while (true) {
+          // ask the player for the row
           System.out.print("Player 1 enter row number:");
           row_read =  readInput.nextInt();
-        
+          
+          // ask the player for the column
           System.out.print("Player 1 enter column number:");
           column_read =  readInput.nextInt();
 
+          // end the loop if the inputs are valid
           if (board[row_read - 1][column_read - 1] == "_") {
             break;
           }
@@ -63,6 +79,8 @@ public class TicTacToe {
         }
       };
     }
+
+    readInput.close();
   }
 
   static void buildBoard(String[][] board) {
