@@ -53,7 +53,15 @@ public class TicTacToe {
       System.out.flush();
       buildBoard(board);      
 
-
+      if (winner(board)) {
+        if (!isPlayer1) {
+          System.out.println("Player 1 win!");
+          break;
+        } else {
+          System.out.println("Player 2 win!");
+          break;
+        }
+      };
     }
   }
 
