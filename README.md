@@ -1,3 +1,3 @@
 ### Java Tic Tac Toe
 
-A simple tic tac toe that can be play in the terminal
+A simple 2 player tic tac toe game that can be played with your friends in the terminal!!
