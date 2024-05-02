@@ -89,7 +89,9 @@ public class TicTacToe {
           System.out.println("Player 2 win!");
           break;
         }
-      };
+      } else {
+        System.out.println("It's a tie!");
+      }
     }
 
     readInput.close();
